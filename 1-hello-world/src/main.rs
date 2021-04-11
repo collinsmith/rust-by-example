@@ -1,8 +1,14 @@
+//! A Simple Hello World Crate
+//!
+//! See also: [rust-by-example](https://doc.rust-lang.org/rust-by-example/hello.html)
+
+#[doc(hidden)]
 fn main() {
     let hello_world = hello_world();
     println!("{}", hello_world);
 }
 
+/// Returns the string `Hello, world!`
 const fn hello_world() -> &'static str {
     "Hello, world!"
 }
