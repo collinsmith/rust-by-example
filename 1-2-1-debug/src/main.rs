@@ -54,10 +54,21 @@ mod pretty_print {
         age: u8
     }
 
+    impl Person<'_> {
+        fn new(name: &str, age: u8) -> Person {
+            Person { name, age }
+        }
+    }
+
     pub fn main() {
         let name = "Peter";
         let age = 27;
         let peter = Person { name, age };
+
+        // Pretty print
+        println!("{:#?}", peter);
+
+        let peter = Person::new(name, age);
 
         // Pretty print
         println!("{:#?}", peter);
