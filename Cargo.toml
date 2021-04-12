@@ -4,4 +4,5 @@ members = [
     "1-1-0-comments",
     "1-2-0-formatted-print",
     "1-2-1-debug",
+    "1-2-2-display",
 ]
