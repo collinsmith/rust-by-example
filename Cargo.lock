@@ -5,5 +5,9 @@ name = "comments"
 version = "0.1.0"
 
 [[package]]
+name = "formatted-print"
+version = "0.1.0"
+
+[[package]]
 name = "hello-world"
 version = "0.1.0"
