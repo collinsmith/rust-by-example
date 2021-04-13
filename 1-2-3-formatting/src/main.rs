@@ -21,7 +21,7 @@ mod city {
         fn fmt(&self, f: &mut Formatter) -> fmt::Result {
             let lat_c = if self.lat >= 0.0 { 'N' } else { 'S' };
             let lon_c = if self.lon >= 0.0 { 'E' } else { 'W' };
-            write!(f, "{}: {:.3}{} {:.3}{}",
+            write!(f, "{}: {:.3}\u{b0}{} {:.3}\u{b0}{}",
                 self.name,
                 self.lat.abs(), lat_c,
                 self.lon.abs(), lon_c,
