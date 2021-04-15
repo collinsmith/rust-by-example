@@ -17,6 +17,10 @@ name = "display"
 version = "0.1.0"
 
 [[package]]
+name = "enums"
+version = "0.1.0"
+
+[[package]]
 name = "formatted-print"
 version = "0.1.0"
 

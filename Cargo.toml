@@ -9,4 +9,6 @@ members = [
 
     "2-2-tuples",
     "2-3-arrays_and_slices",
+
+    "3-2-0-enums",
 ]
