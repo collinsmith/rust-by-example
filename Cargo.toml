@@ -11,4 +11,5 @@ members = [
     "2-3-arrays_and_slices",
 
     "3-2-0-enums",
+    "3-2-3-linked_list",
 ]
