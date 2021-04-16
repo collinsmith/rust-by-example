@@ -46,14 +46,16 @@ mod web {
 }
 
 mod type_aliases {
-    use crate::{Section, main};
+    use crate::Section;
 
+    #[allow(dead_code)]
     pub enum VeryVerboseEnumOfThingsToDoWithNumbers {
         Add,
         Subtract,
     }
 
     impl VeryVerboseEnumOfThingsToDoWithNumbers {
+        #[allow(dead_code)]
         fn run(&self, x: i32, y: i32) -> i32 {
             match self {
                 Self::Add => x + y,
@@ -66,7 +68,7 @@ mod type_aliases {
 
     impl Section for VeryVerboseEnumOfThingsToDoWithNumbers {
         fn run() {
-            let x = Operations::Add;
+            let _x = Operations::Add;
         }
 
         fn name() -> &'static str {
