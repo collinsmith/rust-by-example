@@ -77,6 +77,43 @@ mod type_aliases {
     }
 }
 
+mod coins {
+    use crate::Section;
+
+    #[derive(Debug)]
+    #[allow(dead_code)]
+    pub enum UsState {
+        Alabama,
+        Alaska,
+        //...
+    }
+
+    #[allow(dead_code)]
+    pub enum Coin {
+        Penny,
+        Nickel,
+        Dime,
+        Quarter(UsState),
+    }
+
+    impl Section for Coin {
+        #[allow(unused_variables,unused_assignments)]
+        fn run() {
+            let coin = Coin::Penny;
+            let mut count = 0;
+            if let Coin::Quarter(state) = coin {
+                println!("State quarter from {:?}!", state);
+            } else {
+                count += 1;
+            }
+        }
+
+        fn name() -> &'static str {
+            module_path!()
+        }
+    }
+}
+
 fn section<M>() where M: Section {
     println!("{0:-<1$}", M::name(), 32);
     M::run();
@@ -85,4 +122,5 @@ fn section<M>() where M: Section {
 fn main() {
     section::<web::WebEvent>();
     section::<type_aliases::VeryVerboseEnumOfThingsToDoWithNumbers>();
+    section::<coins::Coin>();
 }
